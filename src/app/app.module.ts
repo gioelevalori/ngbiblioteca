@@ -1,18 +1,39 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CommonModule } from '@angular/common';
+import { TableModule } from '@fundamental-ngx/core';
+import {UtentiModule} from './utenti/utenti.module';
+import { FormModule } from '@fundamental-ngx/core';
+import { DataTableComponent } from './data-table/data-table.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DataTableComponent,
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    CommonModule,
+    TableModule,
+    UtentiModule,
+    FormModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
